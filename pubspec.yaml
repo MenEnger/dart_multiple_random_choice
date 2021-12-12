@@ -2,8 +2,6 @@ name: multiple_random_choice
 description: A multiple randomly choicing function library
 version: 0.1.0
 homepage: https://github.com/MenEnger/dart_multiple_random_choice
-authors:
-  - MenEnger
 repository: https://github.com/MenEnger/dart_multiple_random_choice
 issue_tracker: https://github.com/MenEnger/dart_multiple_random_choice/issues
 
