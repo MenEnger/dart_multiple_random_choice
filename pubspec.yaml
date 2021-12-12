@@ -8,4 +8,4 @@ environment:
 
 dev_dependencies:
   test: ^1.19.5
-  flutter_lints:
+  lints: ^1.0.1

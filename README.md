@@ -11,29 +11,27 @@ and the Flutter guide for
 [developing packages and plugins](https://flutter.dev/developing-packages). 
 -->
 
-TODO: Put a short description of the package here that helps potential users
-know whether this package might be useful for them.
+A multiple randomly choosing function library
 
 ## Features
 
-TODO: List what your package can do. Maybe include images, gifs, or videos.
+* generate multiple random choice under equally probability from options
+* generate multiple random choice with weight from options
 
-## Getting started
 
-TODO: List prerequisites and provide or point to information on how to
-start using the package.
-
-## Usage
-
-TODO: Include short and useful examples for package users. Add longer examples
-to `/example` folder. 
+## Usage / Example
 
 ```dart
-const like = 'sample';
+final m = {
+  'A': 1.0,
+  'B': 2.0,
+  'C': 10.0,
+  'D': 20,
+  'E': 1,
+};
+final s = randomMultipleWeightedChoice<String>(m, 3);
+print(s);
+// {C,D,B}
 ```
 
-## Additional information
-
-TODO: Tell users more about the package: where to find more information, how to 
-contribute to the package, how to file issues, what response they can expect 
-from the package authors, and more.
+You can see more examples in example folder.
