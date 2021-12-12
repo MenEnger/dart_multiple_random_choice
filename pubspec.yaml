@@ -1,7 +1,11 @@
 name: multiple_random_choice
 description: A multiple randomly choicing function library
 version: 0.1.0
-homepage:
+homepage: https://github.com/MenEnger/dart_multiple_random_choice
+authors:
+  - MenEnger
+repository: https://github.com/MenEnger/dart_multiple_random_choice
+issue_tracker: https://github.com/MenEnger/dart_multiple_random_choice/issues
 
 environment:
   sdk: ">=2.15.0 <3.0.0"
