@@ -1,0 +1,11 @@
+name: multiple_random_choice
+description: A multiple randomly choicing function library
+version: 0.1.0
+homepage:
+
+environment:
+  sdk: ">=2.15.0 <3.0.0"
+
+dev_dependencies:
+  test: ^1.19.5
+  flutter_lints:
