@@ -29,7 +29,7 @@ final m = {
   'D': 20,
   'E': 1,
 };
-final s = randomMultipleWeightedChoice<String>(m, 3);
+final s = randomMultipleWeightedChoice<String>(m, 3, null);
 print(s);
 // {C,D,B}
 ```
