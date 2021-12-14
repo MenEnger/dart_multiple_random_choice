@@ -3,7 +3,8 @@ import 'package:test/test.dart';
 
 void main() {
   test('test run without exception', () {
-    expect(() => randomMultipleChoice(['A','B','C'] ,2), returnsNormally);
+    expect(
+        () => randomMultipleChoice(['A', 'B', 'C'], 2, null), returnsNormally);
 
     final m = {
       'A': 1.0,
@@ -12,6 +13,6 @@ void main() {
       'D': 20,
       'E': 1,
     };
-    expect(() => randomMultipleWeightedChoice(m ,2), returnsNormally);
+    expect(() => randomMultipleWeightedChoice(m, 2, null), returnsNormally);
   });
 }
