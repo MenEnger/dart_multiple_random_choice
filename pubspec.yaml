@@ -1,5 +1,6 @@
 name: multiple_random_choice
-description: A multiple randomly choicing function library
+description:
+  A function library to choose multiple items randomly. This library supports weighted randomly choosing too. Typical examples of usage are lottery and gacha.
 version: 0.1.1
 homepage: https://github.com/MenEnger/dart_multiple_random_choice
 repository: https://github.com/MenEnger/dart_multiple_random_choice
