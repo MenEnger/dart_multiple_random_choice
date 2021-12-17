@@ -22,6 +22,9 @@ A multiple randomly choosing function library
 ## Usage / Example
 
 ```dart
+import 'package:multiple_random_choice/multiple_random_choice.dart';
+
+// weighted multiple random choice
 final m = {
   'A': 1.0,
   'B': 2.0,
@@ -32,6 +35,12 @@ final m = {
 final s = randomMultipleWeightedChoice<String>(m, 3, null);
 print(s);
 // {C,D,B}
+
+
+// equally weight random multiple choice
+final ss = randomMultipleChoice<String>(['A', 'B', 'C', 'D', 'E'], 2, null);
+print(ss);
+//ex. {C, D}
 ```
 
 You can see more examples in example folder.

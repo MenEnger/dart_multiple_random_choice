@@ -15,4 +15,17 @@ void main() {
     };
     expect(() => randomMultipleWeightedChoice(m, 2, null), returnsNormally);
   });
+
+  test('Case negative number', () {
+    expect(() {
+      final m = {
+        'A': -1.0,
+        'B': 2.0,
+        'C': 10.0,
+        'D': 20,
+        'E': 1,
+      };
+      randomMultipleWeightedChoice(m, 2, null);
+    }, throwsA(isA<AssertionError>()));
+  });
 }

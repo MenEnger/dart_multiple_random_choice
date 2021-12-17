@@ -6,19 +6,23 @@ import 'dart:math' show Random;
 import 'dart:collection';
 
 /// generate multiple random choice under equally probability from options
+/// choiceCount: num of choosing objects
+/// random: your favorite Random instance (optionally)
 Set<T> randomMultipleChoice<T>(
     Iterable<T> options, int choiceCount, Random? random) {
-  final entries = options.map((option) {
-    return MapEntry(option, 1);
-  });
+  final entries = options.map((option) => MapEntry(option, 1));
   final map = LinkedHashMap.fromEntries(entries);
   return randomMultipleWeightedChoice<T>(map, choiceCount, random);
 }
 
 /// generate multiple random choice with weight from options
 /// optionToWeightMap: key->option, value->weight
+/// choiceCount: num of choosing objects
+/// random: your favorite Random instance (optionally)
 Set<T> randomMultipleWeightedChoice<T>(
     Map<T, num> optionToWeightMap, int choiceCount, Random? random) {
+  optionToWeightMap.forEach((key, value) {assert(value>=0);});
+
   final tempMap = LinkedHashMap.of(optionToWeightMap);
   var sum = tempMap.values.reduce((val, curr) => val + curr);
   var usingRandom = (random ?? _getDefaultRandom());

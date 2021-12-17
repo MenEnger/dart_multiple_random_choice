@@ -1,3 +1,8 @@
+## 0.1.3
+
+* Add a validation(assert) of negative weight and a test
+* Update document
+
 ## 0.1.2
 
 * Update document
