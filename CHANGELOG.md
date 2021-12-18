@@ -1,3 +1,7 @@
+## 0.1.3+1
+* Format code
+* Optimize assert
+
 ## 0.1.3
 
 * Add a validation(assert) of negative weight and a test

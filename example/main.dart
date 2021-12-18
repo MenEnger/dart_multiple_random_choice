@@ -37,7 +37,8 @@ void main() {
   //ex. {C, D}
 
   // equally weight random multiple choice (given Random)
-  final ssr = randomMultipleChoice<String>(['A', 'B', 'C', 'D', 'E'], 2, Random());
+  final ssr =
+      randomMultipleChoice<String>(['A', 'B', 'C', 'D', 'E'], 2, Random());
   print(ssr);
   //ex. {B, E}
 }

@@ -2,7 +2,7 @@
 /// Inspired by [dart_random_choice](https://pub.dev/packages/dart_random_choice)
 library multiple_random_choice;
 
-import 'dart:math' show Random;
+import 'dart:math' show Random, min;
 import 'dart:collection';
 
 /// generate multiple random choice under equally probability from options
@@ -21,7 +21,9 @@ Set<T> randomMultipleChoice<T>(
 /// random: your favorite Random instance (optionally)
 Set<T> randomMultipleWeightedChoice<T>(
     Map<T, num> optionToWeightMap, int choiceCount, Random? random) {
-  optionToWeightMap.forEach((key, value) {assert(value>=0);});
+  assert(
+      optionToWeightMap.values.map((weight) => weight.toDouble()).reduce(min) >=
+          0);
 
   final tempMap = LinkedHashMap.of(optionToWeightMap);
   var sum = tempMap.values.reduce((val, curr) => val + curr);
